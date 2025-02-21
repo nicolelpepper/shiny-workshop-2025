@@ -7,7 +7,20 @@ ui <- navbarPage(
   # (Page 1) intro tabPanel ----------------------------------------------------
   tabPanel(title = "About this App",
            
-           "background info will go here"
+           # intro text fluidRow ----
+           fluidRow(
+             
+             # use columns to create white space on sides
+             column(1), # add blank column next to text
+             column(10, includeMarkdown("text/about.md")),
+             column(1) # add blank column next to text
+             
+           ), # END intro text fluidRow
+           
+           hr(), # creates light gray horizontal line
+           
+           # footer text ----
+           includeMarkdown("text/footer.md")
            
   ), # END (Page 1) intro tabPanel
   
@@ -53,7 +66,8 @@ ui <- navbarPage(
                         mainPanel(
                           
                           # Trout scatterplot output
-                          plotOutput(outputId = "trout_scatterplot_output")
+                          plotOutput(outputId = "trout_scatterplot_output") |>
+                            withSpinner(color = "limegreen", type = 4, size = 2)
                           
                         ) # END trout mainPanel
                         
@@ -92,7 +106,8 @@ ui <- navbarPage(
                         mainPanel(
                           
                           # Penguin histogram output
-                          plotOutput(outputId = "flipper_length_histogram_output")
+                          plotOutput(outputId = "flipper_length_histogram_output") |>
+                            withSpinner(color = "hotpink", type = 4, size = 2)
                         ) # END penguins mainPanel
                         
                       ) # END penguins sidebar layout

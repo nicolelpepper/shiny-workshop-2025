@@ -1,0 +1,1 @@
+*This app is maintained by [Nicole Pepper](https://nicolelpepper.github.io/) and is updated as needed for teaching purposes.*

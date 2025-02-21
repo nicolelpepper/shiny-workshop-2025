@@ -5,6 +5,8 @@
 library(shiny)
 library(shinyWidgets)
 library(tidyverse)
+library(shinycssloaders)
+library(markdown)
 
 # Data
 library(palmerpenguins)

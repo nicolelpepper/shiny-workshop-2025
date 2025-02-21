@@ -2,12 +2,24 @@
 library(shiny)
 library(tidyverse)
 library(palmerpenguins)
+library(bslib)
 
 
 # ---------------------------------------------------------------------------------------------------
 # ---- User interface (UI) ----
 
 ui <- fluidPage(
+  
+  # use preset theme
+  # theme = bs_theme(bootswatch = "solar"),
+  
+  theme = bs_theme(
+    bg = "lavender",
+    fg = "purple",
+    primary = "cornflowerblue",
+    base_font = font_google("Pacifico")
+    
+  ),
   
   # app title ----
   # tags is a list ($) that contains a bunch of functions that match html text (i.e. header, hyperlink, etc)
